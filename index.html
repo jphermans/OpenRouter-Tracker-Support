@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter Tracker — Support &amp; Privacy</title>
+<meta name="description" content="Support, contact and privacy policy for OpenRouter Tracker — the iOS app that turns your OpenRouter account into a dashboard.">
+<style>
+  :root {
+    --bg: #11171F;
+    --bg-soft: #161E28;
+    --card: rgba(255,255,255,0.045);
+    --card-border: rgba(255,255,255,0.09);
+    --text: #EBF0F7;
+    --muted: #9AA7B8;
+    --violet: #8B7CF6;
+    --cyan: #22D3EE;
+    --orange: #FB923C;
+    --green: #4ADE80;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #EBF0F7;
+      --bg-soft: #E1E8F1;
+      --card: rgba(255,255,255,0.75);
+      --card-border: rgba(15,23,42,0.10);
+      --text: #101623;
+      --muted: #51617A;
+      --violet: #6D5AE0;
+      --cyan: #0891B2;
+      --orange: #D97706;
+      --green: #16A34A;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  header.hero {
+    padding: 56px 0 40px;
+    text-align: center;
+  }
+  .app-icon {
+    width: 108px; height: 108px; border-radius: 24px; margin: 0 auto 18px;
+    box-shadow: 0 18px 40px rgba(124, 92, 255, 0.35);
+    display: block;
+  }
+  h1 { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin-top: 6px; }
+  .badges { margin-top: 16px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    font-size: 0.78rem; font-weight: 600;
+    padding: 5px 12px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--card-border);
+    color: var(--muted);
+  }
+  nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--card-border); }
+  nav .wrap { display: flex; gap: 22px; padding-top: 12px; padding-bottom: 12px; overflow-x: auto; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
+  nav a:hover { color: var(--violet); }
+  section { padding: 34px 0 6px; }
+  h2 {
+    font-size: 1.35rem; font-weight: 700; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+  }
+  p { color: var(--muted); margin-bottom: 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  ul { color: var(--muted); margin: 0 0 12px 20px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .meta { background: var(--bg-soft); border: 1px solid var(--card-border); border-radius: 12px; padding: 12px 14px; }
+  .meta .k { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .meta .v { font-size: 0.95rem; font-weight: 600; margin-top: 2px; }
+  code, .desc {
+    background: var(--bg-soft); border: 1px solid var(--card-border);
+    border-radius: 10px; padding: 14px 16px; display: block;
+    font-size: 0.9rem; color: var(--muted); white-space: pre-wrap; margin-bottom: 14px;
+  }
+  footer { padding: 40px 0 60px; text-align: center; color: var(--muted); font-size: 0.85rem; }
+  footer .row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .btn {
+    display: inline-block; background: linear-gradient(135deg, var(--violet), var(--cyan));
+    color: #fff !important; font-weight: 600; text-decoration: none;
+    padding: 12px 26px; border-radius: 999px; font-size: 0.95rem;
+    box-shadow: 0 10px 24px rgba(124, 92, 255, 0.30);
+  }
+  .btn:hover { text-decoration: none; opacity: 0.92; }
+  .center { text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="app-icon" src="icon.png" alt="OpenRouter Tracker icon">
+    <h1>OpenRouter Tracker</h1>
+    <p class="tagline">Your OpenRouter account in your pocket — usage, credits, charts and every model's real price.</p>
+    <div class="badges">
+      <span class="badge">Version 0.1.40</span>
+      <span class="badge">iOS 26.0+ / iPadOS 26.0+</span>
+      <span class="badge">iPhone &amp; iPad</span>
+      <span class="badge">Free</span>
+      <span class="badge">No tracking</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#app">The App</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#support">Support</a>
+    <a href="#faq">FAQ</a>
+    <a href="#developer">Developer</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="app">
+    <h2><span class="dot" style="background: var(--violet)"></span>The App</h2>
+    <div class="card">
+      <p>OpenRouter Tracker is a native iOS app built with SwiftUI and the iOS 26 liquid-glass design language. It turns the OpenRouter API into a personal dashboard:</p>
+      <ul>
+        <li><strong>Balance &amp; spending</strong> — your remaining credit (or key limit), lifetime and monthly spend, with a low-balance banner that turns orange below $10 and red below $5.</li>
+        <li><strong>Usage charts</strong> — daily spend/tokens bars with period average, a trend line that follows the data, and tap-a-day details. Day / Week / Month / Custom ranges, where custom ranges query the analytics API for full history — including a single day (e.g. 30/8/26 – 30/8/26).</li>
+        <li><strong>Model catalog</strong> — all 400+ models with real per-1M-token prices, capability filters (Vision · Developer · Reasoning · Free · Other), search and server-side sorting.</li>
+        <li><strong>Privacy first</strong> — your API keys live only in the iOS Keychain; optional PIN (salted SHA-256) and Face ID / Touch ID protection, with re-lock when the app leaves the foreground.</li>
+        <li><strong>Explore with sample data</strong> — no OpenRouter account yet? The setup screen fills the app with consistent sample figures so you can try everything first.</li>
+      </ul>
+      <p>All amounts are shown in US dollars, exactly like openrouter.ai.</p>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:1.1rem; margin-bottom:12px;">App Store metadata</h2>
+      <div class="meta-grid">
+        <div class="meta"><div class="k">Developer</div><div class="v">Jean-Pierre Hermans</div></div>
+        <div class="meta"><div class="k">Brand</div><div class="v">JPHsystems</div></div>
+        <div class="meta"><div class="k">Category</div><div class="v">Developer Tools</div></div>
+        <div class="meta"><div class="k">Price</div><div class="v">Free</div></div>
+        <div class="meta"><div class="k">In-app purchases</div><div class="v">None</div></div>
+        <div class="meta"><div class="k">Ads / tracking</div><div class="v">None</div></div>
+      </div>
+      <p style="margin-top:14px;">Suggested description:</p>
+      <div class="desc">OpenRouter Tracker is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Custom date ranges reach your full usage history via the analytics API, charts show trends at a glance, and a PIN with Face ID keeps your keys in the iOS Keychain and your data on your device. No tracking, no ads, no account required to explore.</div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <h2><span class="dot" style="background: var(--green)"></span>Privacy Policy</h2>
+    <div class="card">
+      <p><strong>Effective date: August 30, 2026.</strong> This policy applies to OpenRouter Tracker (the “app”), developed by Jean-Pierre Hermans (“JPHsystems”, “we”, “the developer”).</p>
+      <p><strong>1. Data we collect.</strong> The developer does not collect any personal data. The app has no accounts, no analytics SDKs, no advertising, and no third-party tracking of any kind.</p>
+      <p><strong>2. Data stored on your device.</strong> Your OpenRouter API keys are stored exclusively in the iOS Keychain — encrypted, on-device, and never readable by the developer. If you set a PIN, only a salted SHA-256 hash of it is stored in the Keychain. Non-sensitive preferences (appearance, refresh interval, protection settings) are stored in UserDefaults on your device.</p>
+      <p><strong>3. Data transmitted.</strong> The app talks only to OpenRouter's official API (openrouter.ai), using the keys you provide: key information, credit balance, usage activity, analytics, and the public model catalog. No other party receives your data. All connections use HTTPS.</p>
+      <p><strong>4. Face ID / Touch ID.</strong> Biometrics are used solely to unlock the app on your device via iOS Local Authentication. Biometric data never leaves the device and is never stored by the app.</p>
+      <p><strong>5. Children.</strong> The app is not directed to children under 13 and does not knowingly collect any personal information from anyone.</p>
+      <p><strong>6. Security.</strong> Keys are held in the Keychain with device-only accessibility, PIN hashes are salted, and the app re-locks and blurs its content when it leaves the foreground so balances are never visible in the app switcher.</p>
+      <p><strong>7. Deletion.</strong> “Remove all data” in Settings deletes your keys and protection from the device immediately. Uninstalling the app removes the remaining on-device data. Data held by OpenRouter is governed by OpenRouter's own terms and policies.</p>
+      <p><strong>8. Changes.</strong> If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+      <p><strong>9. Contact.</strong> Questions about this policy or the app can be sent via the support channels below.</p>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2><span class="dot" style="background: var(--orange)"></span>Support</h2>
+    <div class="card">
+      <p>OpenRouter Tracker is a small independent project. The fastest way to reach me is the public issue tracker:</p>
+      <p class="center" style="margin: 18px 0;">
+        <a class="btn" href="https://github.com/jphermans/OpenRouter-Tracker-Support/issues" target="_blank" rel="noopener">File a support request on GitHub</a>
+      </p>
+      <p>Please include your iOS version, device model and, if possible, a screenshot of the problem. Feature requests are welcome there too.</p>
+    </div>
+
+    <div class="card" id="faq">
+      <h2 style="font-size:1.1rem; margin-bottom:12px;">Frequently asked questions</h2>
+      <p><strong>Which keys does the app need?</strong> A standard API key (openrouter.ai/keys) for the model catalog and key info. A management key (openrouter.ai/settings/api-keys) unlocks the credit balance and the usage charts.</p>
+      <p><strong>Why don't I see charts with my keys?</strong> Charts need the management key. Also check the period — recent usage may be empty while older months have data; use a Custom range to reach back further.</p>
+      <p><strong>Can I top up my OpenRouter credits in the app?</strong> The app opens the official OpenRouter credits page for you; the actual payment is handled by OpenRouter itself.</p>
+      <p><strong>Is my API key safe?</strong> Yes — keys live in the iOS Keychain, never in the app's preferences or on a server, and they are only sent to OpenRouter's own API over HTTPS.</p>
+      <p><strong>What happens to my data if I delete the app?</strong> Everything is on-device: keys in the Keychain and preferences in UserDefaults are removed with the app (or immediately via “Remove all data”).</p>
+      <p><strong>Does the app work on iPad?</strong> Yes — it is a universal app with a split-view model catalog and size-adaptive typography on iPadOS 26+.</p>
+    </div>
+  </section>
+
+  <section id="developer">
+    <h2><span class="dot" style="background: var(--cyan)"></span>Developer</h2>
+    <div class="card">
+      <p>OpenRouter Tracker is built and maintained by <strong>Jean-Pierre Hermans</strong> (brand: <strong>JPHsystems</strong>), an independent developer in Belgium.</p>
+      <p>© 2026 JPHsystems. All rights reserved.</p>
+      <p>OpenRouter and the OpenRouter logo are trademarks of OpenRouter Inc. This app is an independent project and is <strong>not affiliated with, endorsed by, or sponsored by OpenRouter Inc.</strong> Use of the OpenRouter API is subject to OpenRouter's own terms of service and privacy policy.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#support">Support</a>
+    </div>
+    <p>© 2026 JPHsystems — OpenRouter Tracker. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
