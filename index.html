@@ -64,6 +64,9 @@
   nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
   nav a:hover { color: var(--violet); }
   section { padding: 34px 0 6px; }
+  .cl { display: flex; gap: 12px; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--card-border); font-size: 0.92rem; }
+  .cl:last-child { border-bottom: 0; }
+  .cl .v { min-width: 56px; font-weight: 700; color: var(--violet); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; }
   h2 {
     font-size: 1.35rem; font-weight: 700; margin-bottom: 14px;
     display: flex; align-items: center; gap: 10px;
@@ -128,6 +131,7 @@
     <a href="#support">Support</a>
     <a href="#donate">Donate</a>
     <a href="#faq">FAQ</a>
+    <a href="#changelog">Changelog</a>
     <a href="#developer">Developer</a>
   </div>
 </nav>
@@ -212,6 +216,68 @@
     </div>
   </section>
 
+  <section id="changelog">
+    <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
+    <div class="card">
+      <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.55</span><span>What's-new in the app now keeps the 12 latest releases; the full history lives on this page.</span></div>
+      <div class="cl"><span class="v">0.1.54</span><span>Launch shows your last-known data instantly (cached, then refreshed); custom periods get 7/30/90-day and This-year quick presets; Models sort &amp; category are remembered.</span></div>
+      <div class="cl"><span class="v">0.1.53</span><span>Pull-to-refresh no longer reports false key errors — cancelled refreshes are ignored, not shown as “management key” failures.</span></div>
+      <div class="cl"><span class="v">0.1.52</span><span>Widget tap-to-refresh button; the app re-locks only on background (no Face ID prompt for Control Center); demo env hook DEBUG-only.</span></div>
+      <div class="cl"><span class="v">0.1.51</span><span>Widget upgrade: month &amp; lifetime spend, 14-day spend sparkline, low-balance coloring, tap to open the app.</span></div>
+      <div class="cl"><span class="v">0.1.50</span><span>All interface orientations supported on iPhone and iPad (build warning fixed).</span></div>
+      <div class="cl"><span class="v">0.1.49</span><span>What's-new entries extended through 0.1.48.</span></div>
+      <div class="cl"><span class="v">0.1.48</span><span>About links cleaned up — support &amp; privacy and GitHub issues only.</span></div>
+      <div class="cl"><span class="v">0.1.47</span><span>Support &amp; privacy page and GitHub issues/PRs links added to About and Settings.</span></div>
+      <div class="cl"><span class="v">0.1.46</span><span>Cheapest-models card now shows paid models only.</span></div>
+      <div class="cl"><span class="v">0.1.45</span><span>New “Cheapest models today” card — the cheapest paid model per capability (Coding, Reasoning, Other).</span></div>
+      <div class="cl"><span class="v">0.1.44</span><span>Day details: best &amp; cheapest model used that day, per capability.</span></div>
+      <div class="cl"><span class="v">0.1.43</span><span>PIN lockout countdown, favourite models, error toasts, tap-anywhere chart selection, About “What's new”.</span></div>
+      <div class="cl"><span class="v">0.1.42</span><span>PIN entry shows the 4th dot before advancing.</span></div>
+      <div class="cl"><span class="v">0.1.41</span><span>Balance widget (home &amp; lock screen), low-balance notifications, CSV export, top-up auto-refresh, chart accessibility.</span></div>
+      <div class="cl"><span class="v">0.1.40</span><span>Lock on background with privacy blur, sample-data mode for review, App Store screenshot pack.</span></div>
+      <div class="cl"><span class="v">0.1.39</span><span>iPad-adaptive text size across every view; chart axis money fix.</span></div>
+      <div class="cl"><span class="v">0.1.38</span><span>Help &amp; README updated for 0.1.31–0.1.37; screenshots regenerated.</span></div>
+      <div class="cl"><span class="v">0.1.37</span><span>Tap a day in the daily chart for spend, tokens and requests.</span></div>
+      <div class="cl"><span class="v">0.1.36</span><span>Cancel button on the PIN setup and PIN verify sheets.</span></div>
+      <div class="cl"><span class="v">0.1.35</span><span>USD everywhere (like openrouter.ai) + single-day custom ranges.</span></div>
+      <div class="cl"><span class="v">0.1.33</span><span>Trend line now flows with the data.</span></div>
+      <div class="cl"><span class="v">0.1.32</span><span>Daily spend chart: least-squares trend line.</span></div>
+      <div class="cl"><span class="v">0.1.31</span><span>Protection: PIN required to disable the PIN or Face ID; PIN setup can't close early.</span></div>
+      <div class="cl"><span class="v">0.1.30</span><span>Top models: zero-cost models stay in the list but out of the chart.</span></div>
+      <div class="cl"><span class="v">0.1.29</span><span>Keychain save fixed with the keychain-access-groups entitlement.</span></div>
+      <div class="cl"><span class="v">0.1.28</span><span>Daily spend chart fixed with real analytics data.</span></div>
+      <div class="cl"><span class="v">0.1.27</span><span>Top models: minimum-width bars for tiny costs.</span></div>
+      <div class="cl"><span class="v">0.1.26</span><span>Analytics row limit, per-model aggregation, zero-cost auto-switch.</span></div>
+      <div class="cl"><span class="v">0.1.25</span><span>Analytics decode failure fixed.</span></div>
+      <div class="cl"><span class="v">0.1.24</span><span>Demo/screenshot numbers made consistent.</span></div>
+      <div class="cl"><span class="v">0.1.23</span><span>Analytics fallback for Day/Week/Month when activity is empty.</span></div>
+      <div class="cl"><span class="v">0.1.22</span><span>iPadOS: unified Models detail pane background.</span></div>
+      <div class="cl"><span class="v">0.1.21</span><span>About identity card explicitly centered.</span></div>
+      <div class="cl"><span class="v">0.1.20</span><span>In-app top-up via SFSafariViewController.</span></div>
+      <div class="cl"><span class="v">0.1.19</span><span>Links to the essential openrouter.ai pages.</span></div>
+      <div class="cl"><span class="v">0.1.18</span><span>Single adaptive app icon per Apple's liquid-glass guidance.</span></div>
+      <div class="cl"><span class="v">0.1.17</span><span>Unified dark background across all screens.</span></div>
+      <div class="cl"><span class="v">0.1.16</span><span>Main screen renamed to “AI Tokens Usage”.</span></div>
+      <div class="cl"><span class="v">0.1.15</span><span>About page as a fifth tab.</span></div>
+      <div class="cl"><span class="v">0.1.14</span><span>Custom periods reach full history via the analytics API.</span></div>
+      <div class="cl"><span class="v">0.1.13</span><span>Period-aware spend labels.</span></div>
+      <div class="cl"><span class="v">0.1.12</span><span>Icon styles, dark/light/tinted icons, JPHsystems splash 3s, README refresh.</span></div>
+      <div class="cl"><span class="v">0.1.11</span><span>Limit caption no longer claims “resets monthly”.</span></div>
+      <div class="cl"><span class="v">0.1.10</span><span>Branded splash screen.</span></div>
+      <div class="cl"><span class="v">0.1.9</span><span>Discoverable period picker + top-models data fix.</span></div>
+      <div class="cl"><span class="v">0.1.8</span><span>Aligned model rows with complete text, iPad-ready.</span></div>
+      <div class="cl"><span class="v">0.1.7</span><span>Configurable auto refresh.</span></div>
+      <div class="cl"><span class="v">0.1.6</span><span>Site-style model sorting.</span></div>
+      <div class="cl"><span class="v">0.1.5</span><span>Bigger, readable model list rows.</span></div>
+      <div class="cl"><span class="v">0.1.4</span><span>Visible spend charts + iPad-ready layouts.</span></div>
+      <div class="cl"><span class="v">0.1.3</span><span>Custom usage period (Day / Week / Month / From-To).</span></div>
+      <div class="cl"><span class="v">0.1.2</span><span>Keys survive app updates.</span></div>
+      <div class="cl"><span class="v">0.1.1</span><span>“Change keys” no longer loses the standard key.</span></div>
+      <div class="cl"><span class="v">0.1.0</span><span>Initial release: two-key setup, balance &amp; usage tracking, PIN + Face ID protection, model catalog with prices, help, dark &amp; light mode.</span></div>
+    </div>
+  </section>
+
   <section id="developer">
     <h2><span class="dot" style="background: var(--cyan)"></span>Developer</h2>
     <div class="card">
@@ -229,6 +295,7 @@
       <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>
       <a href="#privacy">Privacy Policy</a>
       <a href="#support">Support</a>
+      <a href="#changelog">Changelog</a>
     </div>
     <p>© 2026 JPHsystems — OpenRouter Tracker. All rights reserved.</p>
   </div>
