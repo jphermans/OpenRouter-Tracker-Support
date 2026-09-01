@@ -147,8 +147,9 @@
         <li><strong>Usage charts</strong> — daily spend/tokens bars with period average, a trend line that follows the data, and tap-a-day details. Day / Week / Month / Custom ranges, where custom ranges query the analytics API for full history — including a single day (e.g. 30/8/26 – 30/8/26).</li>
         <li><strong>Model catalog</strong> — all 400+ models with real per-1M-token prices, capability filters (Vision · Developer · Reasoning · Free · Other), search and server-side sorting.</li>
         <li><strong>Privacy first</strong> — your API keys live only in the iOS Keychain; optional PIN (salted SHA-256) and Face ID / Touch ID protection, with re-lock when the app leaves the foreground.</li>
-        <li><strong>Stay informed</strong> — an optional low-balance notification (once per crossing below $10 / $5) and a home-screen &amp; lock-screen widget showing your remaining balance.</li>
-        <li><strong>Export</strong> — share any period as CSV (daily rows + per-model rows) straight from the app.</li>
+        <li><strong>Stay informed</strong> — optional low-balance notifications (once per crossing below $10 / $5, plus one when it recovers), a Sunday-evening weekly summary, and a configurable home-screen &amp; lock-screen widget (Balance or Today's usage).</li>
+        <li><strong>Siri &amp; Shortcuts</strong> — ask “What's my OpenRouter balance?” without opening the app.</li>
+        <li><strong>Export</strong> — share any period as CSV (daily rows + per-model rows) or as a print-ready PDF report straight from the app.</li>
         <li><strong>Explore with sample data</strong> — no OpenRouter account yet? The setup screen fills the app with consistent sample figures so you can try everything first.</li>
       </ul>
       <p>All amounts are shown in US dollars, exactly like openrouter.ai.</p>
@@ -220,6 +221,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.59</span><span>Siri balance intent, configurable widget modes (Balance / Today's usage), weekly summary notification, PDF report export, today-vs-yesterday tile, recent custom ranges, iPad keyboard shortcuts, rate-app nudge, stale-data hint, clearer 401/429 errors.</span></div>
       <div class="cl"><span class="v">0.1.58</span><span>Enabling the PIN always asks for a new one, entered twice — a disabled PIN is deleted and can never be revived.</span></div>
       <div class="cl"><span class="v">0.1.57</span><span>Disabling the PIN now deletes it — enabling it again asks for a brand-new PIN, entered twice.</span></div>
       <div class="cl"><span class="v">0.1.56</span><span>Balance-recovered notification, “Updated” timestamp on the balance card, remembered Cost/Tokens toggle, toast tap-to-dismiss &amp; retry, live lockout countdown in PIN verify, sparkline accessibility, clearer API errors, constant-time PIN check.</span></div>
