@@ -148,7 +148,7 @@
         <li><strong>Model catalog</strong> — all 400+ models with real per-1M-token prices, capability filters (Vision · Developer · Reasoning · Free · Other), search and server-side sorting.</li>
         <li><strong>Privacy first</strong> — your API keys live only in the iOS Keychain; optional PIN (salted SHA-256) and Face ID / Touch ID protection, with re-lock when the app leaves the foreground.</li>
         <li><strong>Stay informed</strong> — optional low-balance notifications (once per crossing below $10 / $5, plus one when it recovers), a Sunday-evening weekly summary, and a configurable home-screen &amp; lock-screen widget (Balance or Today's usage).</li>
-        <li><strong>Siri &amp; Shortcuts</strong> — ask “What's my OpenRouter balance?” without opening the app.</li>
+        <li><strong>Siri &amp; Shortcuts</strong> — ask “What's my OpenRouter balance?” or “What's my usage today?” without opening the app.</li>
         <li><strong>Export</strong> — share any period as CSV (daily rows + per-model rows) or as a print-ready PDF report straight from the app.</li>
         <li><strong>Explore with sample data</strong> — no OpenRouter account yet? The setup screen fills the app with consistent sample figures so you can try everything first.</li>
       </ul>
@@ -168,7 +168,7 @@
       <p style="margin-top:14px;">Suggested description:</p>
       <div class="desc">OpenRouter Tracker is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">Siri: ask “What's my OpenRouter balance?” · widget modes: Balance or Today's usage · weekly usage summary every Sunday evening · PDF report export (plus CSV) · today-vs-yesterday comparison · quick custom-range presets and recent ranges · iPad keyboard shortcuts (Cmd+1–5, Cmd+R, Cmd+F) · weekly summary &amp; recovered-balance notifications · clearer key error messages.</div>
+      <div class="desc">The About tab shows a badge when a new version arrives · Siri: “What's my usage today?” · ★ Favourites filter chip and copy-model-ID in the catalog · failed refreshes retry automatically · the widget now renders in tinted mode · deep links open any tab (openroutertracker://models, //settings…) · PDF reports add the cheapest models per capability and use dated filenames.</div>
     </div>
   </section>
 
@@ -223,6 +223,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.61</span><span>About-tab badge when a new version arrives; “Today's usage” Siri intent; Favourites filter chip &amp; copy-model-ID; failed refreshes auto-retry; tinted widget support; deep links to every tab; PDF gains cheapest-models section and dated filename.</span></div>
       <div class="cl"><span class="v">0.1.60</span><span>Help refreshed: today-vs-yesterday comparison, stale-data hint, error-toast retry, lock-on-background and remembered model sort documented.</span></div>
       <div class="cl"><span class="v">0.1.59</span><span>Siri balance intent, configurable widget modes (Balance / Today's usage), weekly summary notification, PDF report export, today-vs-yesterday tile, recent custom ranges, iPad keyboard shortcuts, rate-app nudge, stale-data hint, clearer 401/429 errors.</span></div>
       <div class="cl"><span class="v">0.1.58</span><span>Enabling the PIN always asks for a new one, entered twice — a disabled PIN is deleted and can never be revived.</span></div>
