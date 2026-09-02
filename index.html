@@ -168,7 +168,7 @@
       <p style="margin-top:14px;">Suggested description:</p>
       <div class="desc">OpenRouter Tracker is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">Your favourite (starred) models now sync across your devices through iCloud — pin a model on your iPhone and it appears pinned on your iPad too. The stars are stored on-device and mirrored to iCloud Key-Value Storage; nothing is sent anywhere else, and signing out of iCloud never removes them.</div>
+      <div class="desc">Fix: “Blur in app switcher” now genuinely blurs the app snapshot even when no PIN is set — previously that path was tied to the unlock state and never fired without protection.</div>
     </div>
   </section>
 
@@ -223,6 +223,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.67</span><span>Fix: 'Blur in app switcher' now actually blurs when no PIN is set — the blur was wrongly tied to the unlock state, which only ever becomes true through the PIN/biometrics flow.</span></div>
       <div class="cl"><span class="v">0.1.66</span><span>Starred models now sync across your devices via iCloud — pin a model on your iPhone and it's pinned on your iPad too (when signed in to iCloud).</span></div>
       <div class="cl"><span class="v">0.1.65</span><span>Key expiry shown in Settings (orange within 30 days); OpenRouter system-status link; error toast &amp; last-error row are copyable; iPad Settings &amp; Help now use a sidebar split view.</span></div>
       <div class="cl"><span class="v">0.1.64</span><span>Siri fix: registered spoken phrases so “What's my OpenRouter balance?” and “What's my usage today?” are recognized out of the box (previously the intents only worked from the Shortcuts app).</span></div>
