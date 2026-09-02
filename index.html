@@ -168,7 +168,7 @@
       <p style="margin-top:14px;">Suggested description:</p>
       <div class="desc">OpenRouter Tracker is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">Fix: the “Send test notification” button (and low-balance / weekly-summary alerts) now shows a banner even while the app is open. Previously iOS delivered the notification silently in the foreground because the app did not opt into foreground presentation — tap the test button again after updating and a banner should appear immediately.</div>
+      <div class="desc">Appearance, refresh interval and the alert toggles now sync between your devices through iCloud (like the starred models). Errors: after three consecutive failed refreshes, the message links to the OpenRouter status page so an outage is easy to tell apart from a key problem. Sample-data sessions can be reset from Settings → Data with “Reload sample data”. Keys never sync — they stay in the Keychain.</div>
     </div>
   </section>
 
@@ -223,6 +223,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.69</span><span>Settings sync across your devices via iCloud (appearance, refresh interval, alert toggles); after repeated failed refreshes the error suggests the OpenRouter status page; sample-data sessions can be reloaded from Settings → Data.</span></div>
       <div class="cl"><span class="v">0.1.68</span><span>Fix: the test notification (and low-balance / weekly alerts) now appear as banners even while the app is open — previously iOS delivered them silently in the foreground.</span></div>
       <div class="cl"><span class="v">0.1.67</span><span>Fix: 'Blur in app switcher' now actually blurs when no PIN is set — the blur was wrongly tied to the unlock state, which only ever becomes true through the PIN/biometrics flow.</span></div>
       <div class="cl"><span class="v">0.1.66</span><span>Starred models now sync across your devices via iCloud — pin a model on your iPhone and it's pinned on your iPad too (when signed in to iCloud).</span></div>
