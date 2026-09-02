@@ -168,7 +168,7 @@
       <p style="margin-top:14px;">Suggested description:</p>
       <div class="desc">OpenRouter Tracker is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">Siri now recognizes “What's my OpenRouter balance?” and “What's my usage today?” out of the box (spoken phrases registered). Note: Siri needs a real device — it does not exist on simulators.</div>
+      <div class="desc">Key expiry shown in Settings (orange within 30 days) · an OpenRouter system-status link · error toasts and the Settings last-error row can be copied for support requests · on iPad, Settings and Help now use a sidebar split view like the Models screen.</div>
     </div>
   </section>
 
@@ -215,7 +215,7 @@
       <p><strong>Can I top up my OpenRouter credits in the app?</strong> The app opens the official OpenRouter credits page for you; the actual payment is handled by OpenRouter itself.</p>
       <p><strong>Is my API key safe?</strong> Yes — keys live in the iOS Keychain, never in the app's preferences or on a server, and they are only sent to OpenRouter's own API over HTTPS.</p>
       <p><strong>What happens to my data if I delete the app?</strong> Everything is on-device: keys in the Keychain and preferences in UserDefaults are removed with the app (or immediately via “Remove all data”).</p>
-      <p><strong>Does the app work on iPad?</strong> Yes — it is a universal app with a split-view model catalog and size-adaptive typography on iPadOS 26+.</p>
+      <p><strong>Does the app work on iPad?</strong> Yes — it is a universal app: the Models, Settings and Help screens use sidebar split views with size-adaptive typography on iPadOS 26+.</p>
     </div>
   </section>
 
@@ -223,6 +223,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.65</span><span>Key expiry shown in Settings (orange within 30 days); OpenRouter system-status link; error toast &amp; last-error row are copyable; iPad Settings &amp; Help now use a sidebar split view.</span></div>
       <div class="cl"><span class="v">0.1.64</span><span>Siri fix: registered spoken phrases so “What's my OpenRouter balance?” and “What's my usage today?” are recognized out of the box (previously the intents only worked from the Shortcuts app).</span></div>
       <div class="cl"><span class="v">0.1.63</span><span>Month presets (This month / Last month, scrollable chip row); model catalog cached for 12h (faster refreshes); lock-screen widget follows the chosen mode; widget VoiceOver labels; tap the About version to copy it.</span></div>
       <div class="cl"><span class="v">0.1.62</span><span>Key-limit reset date; app-switcher blur without PIN; previous-period comparison for custom ranges; prompt/completion/reasoning split in day details; avg-per-day stat; test-notification button with denied-permission warning; share model link; haptics on manual refresh.</span></div>
