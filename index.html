@@ -115,7 +115,7 @@
     <h1>Token Ledger</h1>
     <p class="tagline">Your OpenRouter account in your pocket — usage, credits, charts and every model's real price.</p>
     <div class="badges">
-      <span class="badge">Version 0.1.78</span>
+      <span class="badge">Version 0.1.79</span>
       <span class="badge">iOS 26.0+ / iPadOS 26.0+</span>
       <span class="badge">iPhone &amp; iPad</span>
       <span class="badge">Free</span>
@@ -155,7 +155,7 @@
         <li><strong>Stay informed</strong> — optional low-balance notifications (once per crossing below $10 / $5, plus one when it recovers), a Sunday-evening weekly summary, and a configurable home-screen &amp; lock-screen widget (Balance or Today's usage).</li>
         <li><strong>Siri &amp; Shortcuts</strong> — ask “What's my OpenRouter balance?” or “What's my usage today?” without opening the app.</li>
         <li><strong>Export</strong> — share any period as CSV (daily rows + per-model rows) or as a print-ready PDF report straight from the app.</li>
-        <li><strong>Explore with sample data</strong> — no OpenRouter account yet? The setup screen fills the app with consistent sample figures so you can try everything first.</li>
+        <li><strong>Explore with sample data</strong> — no account yet? The setup screen fills the app with consistent sample figures for <strong>OpenRouter, TrustedRouter or both</strong> — pick which provider to explore, and the app remembers your choice.</li>
       </ul>
       <p>All amounts are shown in US dollars, exactly like openrouter.ai.</p>
     </div>
@@ -173,7 +173,7 @@
       <p style="margin-top:14px;">Suggested description:</p>
       <div class="desc">Token Ledger is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. TrustedRouter users can add that account as a second provider — its remaining credit, today/week/month spend (prepaid vs BYOK) and key limits, with per-day history when a management key is provided. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">The branded splash now lasts 3 seconds so it clearly registers at every cold launch. (Older notes are in the release history below.)</div>
+      <div class="desc">Sample data now covers both providers: choose OpenRouter, TrustedRouter or both from “Explore with sample data” — the TrustedRouter demo includes credit, prepaid-vs-BYOK split, key limits and a 14-day history. Your chosen provider is remembered.</div>
     </div>
   </section>
 
@@ -228,6 +228,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.79</span><span>Sample data now covers TrustedRouter too — a complete demo (credit, prepaid vs BYOK split, key limits, 14-day history). “Explore with sample data” lets you choose OpenRouter, TrustedRouter or both, and the app remembers your provider choice.</span></div>
       <div class="cl"><span class="v">0.1.78</span><span>TrustedRouter as a second provider: remaining credit, today/week/month spend split between prepaid credit and BYOK, key limits, and a provider switcher on the Usage and Models screens. Optional management key unlocks per-day history.</span></div>
       <div class="cl"><span class="v">0.1.77</span><span>Splash screen set to 3 seconds so it clearly registers at every cold launch.</span></div>
       <div class="cl"><span class="v">0.1.76</span><span>Renamed to Token Ledger — same app, new name (About screen, widget, notifications and exports); still built for your OpenRouter account.</span></div>
