@@ -115,7 +115,7 @@
     <h1>Token Ledger</h1>
     <p class="tagline">Your OpenRouter account in your pocket — usage, credits, charts and every model's real price.</p>
     <div class="badges">
-      <span class="badge">Version 0.1.77</span>
+      <span class="badge">Version 0.1.78</span>
       <span class="badge">iOS 26.0+ / iPadOS 26.0+</span>
       <span class="badge">iPhone &amp; iPad</span>
       <span class="badge">Free</span>
@@ -150,6 +150,7 @@
         <li><strong>Balance &amp; spending</strong> — your remaining credit (or key limit), lifetime and monthly spend, with a low-balance banner that turns orange below $10 and red below $5.</li>
         <li><strong>Usage charts</strong> — daily spend/tokens bars with period average, a trend line that follows the data, and tap-a-day details (including the prompt/completion/reasoning split). Day / Week / Month / Custom ranges with 7/30/90-day, This-month, Last-month and This-year presets; custom ranges query the analytics API for full history — including a single day (e.g. 30/8/26 – 30/8/26).</li>
         <li><strong>Model catalog</strong> — all 400+ models with real per-1M-token prices, capability filters (Vision · Developer · Reasoning · Free · Other), search and server-side sorting.</li>
+        <li><strong>Two providers</strong> — use OpenRouter, TrustedRouter, or both. Add a TrustedRouter API key (from their console) and see that account's remaining credit, today / week / month / lifetime spend split between <em>prepaid credit</em> and <em>BYOK</em> (your own provider keys), plus per-key limits and expiry. A provider switcher on the Usage and Models screens keeps each account's keys, numbers and catalog separate. TrustedRouter returns per-day history and purchased-vs-used totals only to a <strong>management key</strong> — add one later and the History card unlocks; custom date ranges remain OpenRouter-only because TrustedRouter has no analytics-query API.</li>
         <li><strong>Privacy first</strong> — your API keys live only in the iOS Keychain; optional PIN (salted SHA-256) and Face ID / Touch ID protection, with re-lock when the app leaves the foreground and an optional always-on app-switcher blur.</li>
         <li><strong>Stay informed</strong> — optional low-balance notifications (once per crossing below $10 / $5, plus one when it recovers), a Sunday-evening weekly summary, and a configurable home-screen &amp; lock-screen widget (Balance or Today's usage).</li>
         <li><strong>Siri &amp; Shortcuts</strong> — ask “What's my OpenRouter balance?” or “What's my usage today?” without opening the app.</li>
@@ -170,9 +171,9 @@
         <div class="meta"><div class="k">Ads / tracking</div><div class="v">None</div></div>
       </div>
       <p style="margin-top:14px;">Suggested description:</p>
-      <div class="desc">Token Ledger is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
+      <div class="desc">Token Ledger is a personal dashboard for your OpenRouter account. See how much credit you have left, what you spend per day and per model, and browse every model OpenRouter offers with its real per-token prices — including the free ones. Daily charts with trends, tap-a-day details and a today-vs-yesterday comparison; custom date ranges reach your full usage history via the analytics API. Get notified when your balance runs low, let the home-screen widget — in Balance or Today's-usage mode — keep you informed at a glance, and ask Siri “What's my OpenRouter balance?”. Export any period as CSV or a print-ready PDF report. TrustedRouter users can add that account as a second provider — its remaining credit, today/week/month spend (prepaid vs BYOK) and key limits, with per-day history when a management key is provided. Your API keys live only in the iOS Keychain, protected by an optional PIN with Face ID. No tracking, no ads, no account required to explore.</div>
       <p style="margin-top:14px;">Suggested release notes (What's new):</p>
-      <div class="desc">The branded splash now lasts 3 seconds so it clearly registers at every cold launch.</div>
+      <div class="desc">The branded splash now lasts 3 seconds so it clearly registers at every cold launch. (Older notes are in the release history below.)</div>
     </div>
   </section>
 
@@ -181,8 +182,8 @@
     <div class="card">
       <p><strong>Effective date: August 30, 2026.</strong> This policy applies to Token Ledger (the “app”), developed by Jean-Pierre Hermans (“JPHsystems”, “we”, “the developer”).</p>
       <p><strong>1. Data we collect.</strong> The developer does not collect any personal data. The app has no accounts, no analytics SDKs, no advertising, and no third-party tracking of any kind.</p>
-      <p><strong>2. Data stored on your device.</strong> Your OpenRouter API keys are stored exclusively in the iOS Keychain — encrypted, on-device, and never readable by the developer. If you set a PIN, only a salted SHA-256 hash of it is stored in the Keychain. Non-sensitive preferences (appearance, refresh interval, protection settings) are stored in UserDefaults on your device.</p>
-      <p><strong>3. Data transmitted.</strong> The app talks only to OpenRouter's official API (openrouter.ai), using the keys you provide: key information, credit balance, usage activity, analytics, and the public model catalog. No other party receives your data. All connections use HTTPS.</p>
+      <p><strong>2. Data stored on your device.</strong> Your provider API keys (OpenRouter and/or TrustedRouter) are stored exclusively in the iOS Keychain — encrypted, on-device, and never readable by the developer. If you set a PIN, only a salted SHA-256 hash of it is stored in the Keychain. Non-sensitive preferences (appearance, refresh interval, protection settings) are stored in UserDefaults on your device.</p>
+      <p><strong>3. Data transmitted.</strong> The app talks only to the provider(s) you configure — OpenRouter's official API (openrouter.ai) and/or TrustedRouter's official API (trustedrouter.com) — using the keys you provide: key information, credit balance, usage activity, analytics, and the public model catalog. No other party receives your data, and no analytics or advertising SDK is included. All connections use HTTPS.</p>
       <p><strong>4. Face ID / Touch ID.</strong> Biometrics are used solely to unlock the app on your device via iOS Local Authentication. Biometric data never leaves the device and is never stored by the app.</p>
       <p><strong>5. Children.</strong> The app is not directed to children under 13 and does not knowingly collect any personal information from anyone.</p>
       <p><strong>6. Security.</strong> Keys are held in the Keychain with device-only accessibility, PIN hashes are salted, and the app re-locks and blurs its content when it leaves the foreground so balances are never visible in the app switcher.</p>
@@ -214,10 +215,10 @@
 
     <div class="card" id="faq">
       <h2 style="font-size:1.1rem; margin-bottom:12px;">Frequently asked questions</h2>
-      <p><strong>Which keys does the app need?</strong> A standard API key (openrouter.ai/keys) for the model catalog and key info. A management key (openrouter.ai/settings/api-keys) unlocks the credit balance and the usage charts.</p>
+      <p><strong>Which keys does the app need?</strong> For OpenRouter: a standard API key (openrouter.ai/keys) for the model catalog and key info, and a management key (openrouter.ai/settings/api-keys) for the credit balance and usage charts. For TrustedRouter: one API key from their console (trustedrouter.com/console/api-keys) covers the balance, today/week/month spend and key limits; per-day history and total credits additionally need a TrustedRouter <em>management</em> key. Either provider can be used alone, and you can disconnect one in Settings at any time.</p>
       <p><strong>Why don't I see charts with my keys?</strong> Charts need the management key. Also check the period — recent usage may be empty while older months have data; use a Custom range to reach back further.</p>
       <p><strong>Can I top up my OpenRouter credits in the app?</strong> The app opens the official OpenRouter credits page for you; the actual payment is handled by OpenRouter itself.</p>
-      <p><strong>Is my API key safe?</strong> Yes — keys live in the iOS Keychain, never in the app's preferences or on a server, and they are only sent to OpenRouter's own API over HTTPS.</p>
+      <p><strong>Is my API key safe?</strong> Yes — keys live in the iOS Keychain, never in the app's preferences or on a server, and each one is only ever sent to that provider's own API over HTTPS.</p>
       <p><strong>What happens to my data if I delete the app?</strong> Everything is on-device: keys in the Keychain and preferences in UserDefaults are removed with the app (or immediately via “Remove all data”).</p>
       <p><strong>Does the app work on iPad?</strong> Yes — it is a universal app: the Models, Settings and Help screens use sidebar split views with size-adaptive typography on iPadOS 26+.</p>
     </div>
@@ -227,6 +228,7 @@
     <h2><span class="dot" style="background: var(--violet)"></span>Release history</h2>
     <div class="card">
       <p>The app's About screen shows the latest 12 releases; the complete history is here.</p>
+      <div class="cl"><span class="v">0.1.78</span><span>TrustedRouter as a second provider: remaining credit, today/week/month spend split between prepaid credit and BYOK, key limits, and a provider switcher on the Usage and Models screens. Optional management key unlocks per-day history.</span></div>
       <div class="cl"><span class="v">0.1.77</span><span>Splash screen set to 3 seconds so it clearly registers at every cold launch.</span></div>
       <div class="cl"><span class="v">0.1.76</span><span>Renamed to Token Ledger — same app, new name (About screen, widget, notifications and exports); still built for your OpenRouter account.</span></div>
       <div class="cl"><span class="v">0.1.75</span><span>The sample-data button is now a real button (bordered, larger) — clearly tappable instead of looking like a text link.</span></div>
@@ -312,7 +314,7 @@
     <div class="card">
       <p>Token Ledger is built and maintained by <strong>Jean-Pierre Hermans</strong> (brand: <strong>JPHsystems</strong>), an independent developer in Belgium.</p>
       <p>© 2026 JPHsystems. All rights reserved.</p>
-      <p>OpenRouter and the OpenRouter logo are trademarks of OpenRouter Inc. This app is an independent project and is <strong>not affiliated with, endorsed by, or sponsored by OpenRouter Inc.</strong> Use of the OpenRouter API is subject to OpenRouter's own terms of service and privacy policy.</p>
+      <p>OpenRouter and the OpenRouter logo are trademarks of OpenRouter Inc. TrustedRouter and its logo are trademarks of their respective owner. This app is an independent project and is <strong>not affiliated with, endorsed by, or sponsored by</strong> OpenRouter Inc. or TrustedRouter. Use of either API is subject to that provider's own terms of service and privacy policy.</p>
     </div>
   </section>
 
