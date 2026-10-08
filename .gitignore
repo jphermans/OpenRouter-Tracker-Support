@@ -1,2 +1,10 @@
-node_modules/
+# macOS
 .DS_Store
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# Nothing in this folder is built — these shouldn't appear, but just in case
+node_modules/
