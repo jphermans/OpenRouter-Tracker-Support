@@ -151,6 +151,7 @@
   ];
 
   var CHANGELOG = [
+    ['0.1.87', 'The foldable now really does get the wide layout: the two-column dashboard was gated on a content width the Duo inner display never reaches once the vertical bar and safe areas are subtracted, so it stayed single column. The gate tests width and height together, the columns are balanced, and the App Store pack gained inner-display screenshots.'],
     ['0.1.86', 'Ready for iPhone Duo: built with the iOS 27.1 SDK, so the app uses the whole display and the system moves the tab bar and toolbar down the side. Layout is driven by the size of the window instead of the device — two columns when there is room — the Duo inner display included — and one when there is not, content pushed clear of the folding hinge, all four orientations on iPhone. The Settings and Help sidebars respond to every row again, and the remaining Xcode warnings are gone.'],
     ['0.1.85', 'Submission build: an accidental install requirement had crept in — corrected so the app installs exactly where the listing says, on iPhone and iPad. No feature changes; screenshots refreshed.'],
     ['0.1.84', 'New Account log: OpenRouter attributes usage to an API key, so give each tool its own key (Hermes, Agent-Zero, a CLI…) and the log becomes a per-app view — today / 7-day / month / lifetime spend, limits and a daily history per key, with the models that key uses.'],
