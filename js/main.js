@@ -151,6 +151,7 @@
   ];
 
   var CHANGELOG = [
+    ['0.1.86', 'Ready for iPhone Duo: built with the iOS 27.1 SDK, so the app uses the whole display and the system moves the tab bar and toolbar down the side. Layout is driven by the size of the window instead of the device — two columns when there is room, one when there is not, content pushed clear of the folding hinge, all four orientations on iPhone. The Settings and Help sidebars respond to every row again, and the remaining Xcode warnings are gone.'],
     ['0.1.85', 'Submission build: the app was requiring iOS 27 by accident — it now installs on iOS 26.0 and later, exactly as advertised on iPhone and iPad. No feature changes; screenshots refreshed.'],
     ['0.1.84', 'New Account log: OpenRouter attributes usage to an API key, so give each tool its own key (Hermes, Agent-Zero, a CLI…) and the log becomes a per-app view — today / 7-day / month / lifetime spend, limits and a daily history per key, with the models that key uses.'],
     ['0.1.83', 'Numbers now match the OpenRouter website: “this month” meant three different things. The balance line uses the account-wide calendar month, the chart period is labelled “7 days” / “30 days”, and Settings → Numbers lists every raw figure with its scope.'],
